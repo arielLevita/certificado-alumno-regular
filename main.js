@@ -13,7 +13,7 @@ const career = ["Profesorado de Educación Secundaria en Geografía",
                 "Tecnicatura Superior en Tiempo Libre y Recreación",
                 "Tecnicatura Superior en Gestión Administrativa Orientada a la Producción"];
 
-const resolution = ["303/14","544/19","304/14","547/19","309/14","310/14","328/22","308/14","177/16","TSGAOP"];
+const resolution = ["303/14","544/19","304/14","547/19","309/14","310/14","328/22","308/14","177/16","409/18"];
 
 let btnGenerar = document.getElementById("btnGenerate");
     
@@ -47,4 +47,10 @@ btnGenerar.addEventListener('click', () => {
             <p class="m-0">Correo electrónico: 809esquel@gmail.com</p>
         </div>
     </div>`;
+
+    document.getElementById("btnPrint").innerHTML =
+    `<div class="d-flex justify-content-center my-5">
+        <input class="btn btn-primary" type="button" value="Imprimir" onclick="window.print()">
+    </div>`;
 });
+
