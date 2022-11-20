@@ -87,33 +87,32 @@
                             <label for="floatingDestination">Para presentar ante</label>
                         </div>
 
-                        <hr>
+                        <div class="container border boder-secondary border-1 rounded my-3" id="familiar">
 
-                        <div class="col-auto">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="autoSizingCheck">
-                                <label class="form-check-label" for="autoSizingCheck">
-                                    En caso de solicitar el certificado para ser presentado por un/una padre/madre, seleccionar la casilla y completar los datos a continuación:
-                                </label>
+                            <div class="col-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                                    <label class="form-check-label" for="autoSizingCheck">
+                                        En caso de solicitar el certificado para ser presentado por un/una padre/madre, seleccionar la casilla y completar los datos a continuación:
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="row g-2">
+                                <div class="form-floating col-md-5">
+                                    <input type="text" class="form-control" id="floatingRelativeName" placeholder="Nombres">
+                                    <label for="floatingRelativeName">Nombres</label>
+                                </div>
+                                <div class="form-floating col-md-5">
+                                    <input type="text" class="form-control" id="floatingRelativeLastName" placeholder="Apellidos">
+                                    <label for="floatingRelativeLastName">Apellidos</label>
+                                </div>
+                                <div class="form-floating col-md-2">
+                                    <input type="text" class="form-control" id="floatingRelativeId" placeholder="DNI">
+                                    <label for="floatingRelativeId">DNI</label>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="row g-2 mb-3">
-                            <div class="form-floating col-md-5">
-                                <input type="text" class="form-control" id="floatingRelativeName" placeholder="Nombres">
-                                <label for="floatingRelativeName">Nombres</label>
-                            </div>
-                            <div class="form-floating col-md-5">
-                                <input type="text" class="form-control" id="floatingRelativeLastName" placeholder="Apellidos">
-                                <label for="floatingRelativeLastName">Apellidos</label>
-                            </div>
-                            <div class="form-floating col-md-2">
-                                <input type="text" class="form-control" id="floatingRelativeId" placeholder="DNI">
-                                <label for="floatingRelativeId">DNI</label>
-                            </div>
-                        </div>
-
-                        <hr>
 
                         <div class="d-grid gap-2 d-md-block">
                             <button class="btn btn-primary" type="submit" id="btnGenerate">Generar certificado</button>
