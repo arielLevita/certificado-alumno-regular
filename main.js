@@ -41,7 +41,7 @@ btnGenerar.addEventListener('click', () => {
     document.getElementById("formulario").innerHTML =
         `<div class="container d-flex flex-column justify-content-center certificado">
             <h4 class="mb-5 text-center">Certificado de Alumno Regular</h4>
-            <p>La Dirección del Instituto Superior de Formación Docente Nº 809 CERTIFICA que <span class="text-uppercase fw-bold">${nombre} ${apellido}</span> (DNI Nº${dni}), ${pariente}es alumno/a regular en ${anioCursada} año de la carrera de ${carrera}.</p>
+            <p>La Dirección del Instituto Superior de Formación Docente Nº 809 CERTIFICA que <span class="text-uppercase fw-bold">${nombre} ${apellido}</span> (DNI Nº${dni}),${pariente} es alumno/a regular en ${anioCursada} año de la carrera de ${carrera}.</p>
             <p>A los ${dia} días del mes de ${mes} de ${anio}, en la ciudad de Esquel, se extiende el presente CERTIFICADO a pedido de el/la interesado/a, para ser presentado ante las autoridades de ${destino}.</p>
             <span id="firmas"></span>
             <div class="text-center lh-1" id="datosInstituto">
