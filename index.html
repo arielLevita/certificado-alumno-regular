@@ -9,19 +9,18 @@
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
     <link rel="stylesheet" href="/styles.css" type="text/css" />
     <title>Certificado de Alumno Regular - ISFD809</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
 </head>
 
 <body>
     <main id="principal">
-        <div class="container col-md-8 my-3" id="logos">
-            <div class="row d-flex justify-content-between">
-                <img src="/images/Logo Educación Chubut.png" alt="logo ministerio de educacion chubut" />
-                <img src="/images/Logo fondo transparente.png" alt="logo isfd 809" />
-                <img src="/images/logo 40 democracia cortado.jpg" alt="logo 40 años de democracia" />
+        <div class="container my-3" id="logos">
+            <div class="row d-flex justify-content-around px-5 mb-3">
+                <img src="/images/logo Educ Chubut 24.png" alt="logo ministerio de educacion chubut" id="logo-ministerio" />
+                <img src="/images/Logo fondo transparente.png" alt="logo isfd 809" id="logo-809" />
             </div>
-        </div>
 
-        <div class="container d-flex flex-column justify-content-center col-md-8" id="formulario">
+        <div class="container d-flex flex-column justify-content-center col-md-10" id="formulario">
             <h4 class="text-center my-3">
                 Formulario para impresión de Certificado de Alumno Regular
             </h4>
@@ -30,28 +29,28 @@
                 datos personales deberán estar consignados de la misma forma que
                 figuran en el Documento Nacional de Identidad.
             </p>
-            <p>[En caso de utilizar modo oscuro, se ruega desactivarlo].</p>
+            <p><i>[En caso de utilizar modo oscuro, se ruega desactivarlo].</i></p>
 
             <div class="container">
                 <form class="" action="" target="_top">
                     <div class="row g-2 my-3">
                         <div class="form-floating col-md-5">
-                            <input type="text" class="form-control" id="floatingName" placeholder="Nombres" />
+                            <input type="text" class="form-control" id="floatingName" placeholder="Nombres" required />
                             <label for="floatingName">Nombres</label>
                         </div>
                         <div class="form-floating col-md-5">
-                            <input type="text" class="form-control" id="floatingLastName" placeholder="Apellidos" />
+                            <input type="text" class="form-control" id="floatingLastName" placeholder="Apellidos" required />
                             <label for="floatingLastName">Apellidos</label>
                         </div>
                         <div class="form-floating col-md-2">
-                            <input type="text" class="form-control" id="floatingId" placeholder="DNI" />
+                            <input type="text" class="form-control" id="floatingId" placeholder="DNI" required />
                             <label for="floatingId">DNI</label>
                         </div>
                     </div>
 
                     <div class="row g-2 my-3">
                         <div class="form-floating col-md-10">
-                            <select class="form-select" id="floatingCareer" aria-label="seleccione una carrera">
+                            <select class="form-select" id="floatingCareer" aria-label="seleccione una carrera" required>
                                 <option selected>Seleccione una carrera</option>
                                 <option value="1">
                                     Profesorado de Educación Secundaria en Geografía, Res. MECH
@@ -81,22 +80,25 @@
                                     Profesorado de Educación Inicial, Res. MECH 309/14
                                 </option>
                                 <option value="8">
-                                    Profesorado de Educación Primaria, Res. MECH 310/14
+                                    Profesorado de Educación Inicial, Res. MECH 327/14
                                 </option>
                                 <option value="9">
-                                    Profesorado de Educación Primaria, Res. MECH 328/22
+                                    Profesorado de Educación Primaria, Res. MECH 310/14
                                 </option>
                                 <option value="10">
-                                    Profesorado de Inglés, Res. MECH 308/14
+                                    Profesorado de Educación Primaria, Res. MECH 328/22
                                 </option>
                                 <option value="11">
-                                    Profesorado de Inglés, Res. MECH 326/22
+                                    Profesorado de Inglés, Res. MECH 308/14
                                 </option>
                                 <option value="12">
+                                    Profesorado de Inglés, Res. MECH 326/22
+                                </option>
+                                <option value="13">
                                     Tecnicatura Superior en Tiempo Libre y Recreación, Res. MECH
                                     176/16
                                 </option>
-                                <option value="13">
+                                <option value="14">
                                     Tecnicatura Superior en Gestión Administrativa Orientada a
                                     la Producción
                                 </option>
@@ -105,7 +107,7 @@
                         </div>
 
                         <div class="form-floating col-md-2">
-                            <select class="form-select" id="floatingYear" aria-label="año que cursa">
+                            <select class="form-select" id="floatingYear" aria-label="año que cursa" required>
                                 <option selected>Cursa año</option>
                                 <option value="primero">primer</option>
                                 <option value="segundo">segundo</option>
@@ -118,7 +120,7 @@
 
                     <div class="form-floating my-3">
                         <input type="text" class="form-control" id="floatingDestination"
-                            placeholder="Para presentar ante" />
+                            placeholder="Para presentar ante" required />
                         <label for="floatingDestination">Para presentar ante</label>
                     </div>
 

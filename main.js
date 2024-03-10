@@ -11,6 +11,7 @@ const career = ["Profesorado de Educación Secundaria en Geografía, Res. MECH 3
     "Profesorado de Educación Secundaria en Lengua y Literatura, Res. MECH 302/14",
     "Profesorado de Educación Secundaria en Lengua y Literatura, Res. MECH 536/19",
     "Profesorado de Educación Inicial, Res. MECH 309/14",
+    "Profesorado de Educación Inicial, Res. MECH 327/22",
     "Profesorado de Educación Primaria, Res. MECH 310/14",
     "Profesorado de Educación Primaria, Res. MECH 328/22",
     "Profesorado de Inglés, Res. MECH 308/14",

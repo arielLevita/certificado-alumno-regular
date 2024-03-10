@@ -1,5 +1,11 @@
-#logos img {
-    width: 20vw;
+#logo-ministerio {
+    width: 35%;
+    aspect-ratio: 604/178;
+}
+
+#logo-809 {
+    width: 20%;
+    aspect-ratio: 16/9;
 }
 
 p {
@@ -14,6 +20,7 @@ p {
 .certificado {
     border-left: 10px solid rgb(113, 45, 168);
     padding: 20px;
+    display: block;
 }
 
 #firmas {
