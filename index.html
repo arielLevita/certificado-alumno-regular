@@ -16,155 +16,263 @@
     <main id="principal">
         <div class="container my-3" id="logos">
             <div class="row d-flex justify-content-around px-5 mb-3">
-                <img src="/images/logo Educ Chubut 24.png" alt="logo ministerio de educacion chubut" id="logo-ministerio" />
+                <img src="/images/logo Educ Chubut 24.png" alt="logo ministerio de educacion chubut"
+                    id="logo-ministerio" />
                 <img src="/images/Logo fondo transparente.png" alt="logo isfd 809" id="logo-809" />
             </div>
 
-        <div class="container d-flex flex-column justify-content-center col-md-10" id="formulario">
-            <h4 class="text-center my-3">
-                Formulario para impresión de Certificado de Alumno Regular
-            </h4>
-            <p class="small">
-                Se recuerda que todos los campos son obligatorios, y que todos los
-                datos personales deberán estar consignados de la misma forma que
-                figuran en el Documento Nacional de Identidad.
-            </p>
-            <p><i>[En caso de utilizar modo oscuro, se ruega desactivarlo].</i></p>
+            <div class="container d-flex flex-column justify-content-center col-md-10" id="formulario">
+                <h4 class="text-center my-3">
+                    Formulario para impresión de Certificado de Alumno Regular
+                </h4>
+                <p class="small">
+                    Se recuerda que todos los campos son obligatorios, y que todos los
+                    datos personales deberán estar consignados de la misma forma que
+                    figuran en el Documento Nacional de Identidad.
+                </p>
 
-            <div class="container">
-                <form class="" action="" target="_top">
-                    <div class="row g-2 my-3">
-                        <div class="form-floating col-md-5">
-                            <input type="text" class="form-control" id="floatingName" placeholder="Nombres" required />
-                            <label for="floatingName">Nombres</label>
-                        </div>
-                        <div class="form-floating col-md-5">
-                            <input type="text" class="form-control" id="floatingLastName" placeholder="Apellidos" required />
-                            <label for="floatingLastName">Apellidos</label>
-                        </div>
-                        <div class="form-floating col-md-2">
-                            <input type="text" class="form-control" id="floatingId" placeholder="DNI" required />
-                            <label for="floatingId">DNI</label>
-                        </div>
-                    </div>
-
-                    <div class="row g-2 my-3">
-                        <div class="form-floating col-md-10">
-                            <select class="form-select" id="floatingCareer" aria-label="seleccione una carrera" required>
-                                <option selected>Seleccione una carrera</option>
-                                <option value="1">
-                                    Profesorado de Educación Secundaria en Geografía, Res. MECH
-                                    303/14
-                                </option>
-                                <option value="2">
-                                    Profesorado de Educación Secundaria en Geografía, Res. MECH
-                                    544/19
-                                </option>
-                                <option value="3">
-                                    Profesorado de Educación Secundaria en Historia, Res. MECH
-                                    304/14
-                                </option>
-                                <option value="4">
-                                    Profesorado de Educación Secundaria en Historia, Res. MECH
-                                    547/19
-                                </option>
-                                <option value="5">
-                                    Profesorado de Educación Secundaria en Lengua y Literatura,
-                                    Res. MECH 302/14
-                                </option>
-                                <option value="6">
-                                    Profesorado de Educación Secundaria en Lengua y Literatura,
-                                    Res. MECH 536/19
-                                </option>
-                                <option value="7">
-                                    Profesorado de Educación Inicial, Res. MECH 309/14
-                                </option>
-                                <option value="8">
-                                    Profesorado de Educación Inicial, Res. MECH 327/22
-                                </option>
-                                <option value="9">
-                                    Profesorado de Educación Primaria, Res. MECH 310/14
-                                </option>
-                                <option value="10">
-                                    Profesorado de Educación Primaria, Res. MECH 328/22
-                                </option>
-                                <option value="11">
-                                    Profesorado de Inglés, Res. MECH 308/14
-                                </option>
-                                <option value="12">
-                                    Profesorado de Inglés, Res. MECH 326/22
-                                </option>
-                                <option value="13">
-                                    Tecnicatura Superior en Tiempo Libre y Recreación, Res. MECH
-                                    176/16
-                                </option>
-                                <option value="14">
-                                    Tecnicatura Superior en Gestión Administrativa Orientada a
-                                    la Producción
-                                </option>
-                            </select>
-                            <label for="floatingCarrer">Seleccione una carrera</label>
-                        </div>
-
-                        <div class="form-floating col-md-2">
-                            <select class="form-select" id="floatingYear" aria-label="año que cursa" required>
-                                <option selected>Cursa año</option>
-                                <option value="primero">primer</option>
-                                <option value="segundo">segundo</option>
-                                <option value="tercero">tercero</option>
-                                <option value="cuarto">cuarto</option>
-                            </select>
-                            <label for="floatingResolution">Año que cursa</label>
-                        </div>
-                    </div>
-
-                    <div class="form-floating my-3">
-                        <input type="text" class="form-control" id="floatingDestination"
-                            placeholder="Para presentar ante" required />
-                        <label for="floatingDestination">Para presentar ante</label>
-                    </div>
-
-                    <div class="container border boder-secondary border-1 rounded my-3" id="familiar">
-                        <div class="col-auto">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="autoSizingCheck" />
-                                <label class="form-check-label" for="autoSizingCheck">
-                                    En caso de solicitar el certificado para ser presentado por
-                                    un/una padre/madre, seleccionar la casilla y completar los
-                                    datos a continuación:
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="row g-2">
+                <div class="container">
+                    <form class="" action="" target="_top">
+                        <div class="row g-2 my-3">
                             <div class="form-floating col-md-5">
-                                <input type="text" class="form-control" id="floatingRelativeName"
-                                    placeholder="Nombres" />
-                                <label for="floatingRelativeName">Nombres</label>
+                                <input type="text" class="form-control" id="floatingName" placeholder="Nombres"
+                                    required />
+                                <label for="floatingName">Nombres</label>
                             </div>
                             <div class="form-floating col-md-5">
-                                <input type="text" class="form-control" id="floatingRelativeLastName"
-                                    placeholder="Apellidos" />
-                                <label for="floatingRelativeLastName">Apellidos</label>
+                                <input type="text" class="form-control" id="floatingLastName" placeholder="Apellidos"
+                                    required />
+                                <label for="floatingLastName">Apellidos</label>
                             </div>
                             <div class="form-floating col-md-2">
-                                <input type="text" class="form-control" id="floatingRelativeId" placeholder="DNI" />
-                                <label for="floatingRelativeId">DNI</label>
+                                <input type="text" class="form-control" id="floatingId" placeholder="DNI" required />
+                                <label for="floatingId">DNI</label>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="d-grid gap-2 d-md-block">
-                        <button class="btn btn-primary" type="submit" id="btnGenerate">
-                            Generar certificado
-                        </button>
-                        <button class="btn btn-secondary" type="reset" id="btnDelete">
-                            Borrar
-                        </button>
-                    </div>
-                </form>
+                        <div class="row g-2 my-3">
+                            <div class="form-floating col-md-10">
+                                <select class="form-select" id="floatingCareer" aria-label="seleccione una carrera"
+                                    required>
+                                    <option selected>Seleccione una carrera</option>
+                                    <option value="1">
+                                        Profesorado de Educación Secundaria en Geografía, Res. MECH
+                                        544/19
+                                    </option>
+                                    <option value="2">
+                                        Profesorado de Educación Secundaria en Historia, Res. MECH
+                                        547/19
+                                    </option>
+                                    <option value="3">
+                                        Profesorado de Educación Secundaria en Lengua y Literatura,
+                                        Res. MECH 536/19
+                                    </option>
+                                    <option value="4">
+                                        Profesorado de Educación Inicial, Res. MECH 309/14
+                                    </option>
+                                    <option value="5">
+                                        Profesorado de Educación Inicial, Res. MECH 327/22
+                                    </option>
+                                    <option value="6">
+                                        Profesorado de Educación Primaria, Res. MECH 310/14
+                                    </option>
+                                    <option value="7">
+                                        Profesorado de Educación Primaria, Res. MECH 328/22
+                                    </option>
+                                    <option value="8">
+                                        Profesorado de Inglés, Res. MECH 308/14
+                                    </option>
+                                    <option value="9">
+                                        Profesorado de Inglés, Res. MECH 326/22
+                                    </option>
+                                    <option value="10">
+                                        Tecnicatura Superior en Tiempo Libre y Recreación, Res. MECH
+                                        176/16
+                                    </option>
+                                    <option value="11">
+                                        Tecnicatura Superior en Gestión Administrativa Orientada a
+                                        la Producción
+                                    </option>
+                                </select>
+                                <label for="floatingCarrer">Seleccione una carrera</label>
+                                <button type="button" class="form-text" data-bs-toggle="modal"
+                                    data-bs-target="#careerHelpModal">
+                                    * Click aquí si no sé cuál es mi plan de estudios
+                                </button>
+                            </div>
+
+                            <div class="form-floating col-md-2">
+                                <select class="form-select" id="floatingYear" aria-label="año que cursa" required>
+                                    <option selected>Cursa año</option>
+                                    <option value="primero">Primero</option>
+                                    <option value="segundo">Segundo</option>
+                                    <option value="tercero">Tercero</option>
+                                    <option value="cuarto">Cuarto</option>
+                                </select>
+                                <label for="floatingYear">Año que cursa</label>
+                            </div>
+                        </div>
+
+                        <div class="form-floating my-3">
+                            <input type="text" class="form-control" id="floatingDestination"
+                                placeholder="Para presentar ante" required />
+                            <label for="floatingDestination">Para presentar ante</label>
+                            <button type="button" class="form-text" data-bs-toggle="modal"
+                                data-bs-target="#destinationHelpModal">
+                                * Click aquí para ver ejemplos
+                            </button>
+                        </div>
+
+                        <div class="container border boder-secondary border-1 rounded my-3" id="familiar">
+                            <div class="col-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="autoSizingCheck" />
+                                    <label class="form-check-label" for="autoSizingCheck">
+                                        En caso de solicitar el certificado para ser presentado por
+                                        un/una padre/madre, seleccionar la casilla y completar los
+                                        datos a continuación:
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="row g-2">
+                                <div class="form-floating col-md-5">
+                                    <input type="text" class="form-control" id="floatingRelativeName"
+                                        placeholder="Nombres" />
+                                    <label for="floatingRelativeName">Nombres</label>
+                                </div>
+                                <div class="form-floating col-md-5">
+                                    <input type="text" class="form-control" id="floatingRelativeLastName"
+                                        placeholder="Apellidos" />
+                                    <label for="floatingRelativeLastName">Apellidos</label>
+                                </div>
+                                <div class="form-floating col-md-2">
+                                    <input type="text" class="form-control" id="floatingRelativeId" placeholder="DNI" />
+                                    <label for="floatingRelativeId">DNI</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-block">
+                            <button class="btn btn-primary" type="submit" id="btnGenerate">
+                                Generar certificado
+                            </button>
+                            <button class="btn btn-secondary" type="reset" id="btnDelete">
+                                Borrar
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
+
+            <!-- Modal ejemplos de destinatarios -->
+            <div class="modal fade" id="destinationHelpModal" tabindex="-1" aria-labelledby="destinationHelpModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="destinationHelpModalLabel">Ejemplos de destinatarios</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <dl class="list-group list-group-flush">
+                                <dt>Boleto estudiantil</dt>
+                                <dd class="list-group-item">Boleto Educativo Chubut</dd>
+                                <dt>Viajes</dt>
+                                <dd class="list-group-item">Empresa de Transporte</dd>
+                                <dt>Becas</dt>
+                                <dd class="list-group-item">Becas Provincia de Chubut - Provinciales</dd>
+                                <dd class="list-group-item">Municipalidad de [nombre del municipio] - PAE</dd>
+                                <dt>Apertura de legajo</dt>
+                                <dd class="list-group-item">Junta de Clasificación de Nivel Secundario</dd>
+                                <dt>Obra Social</dt>
+                                <dd class="list-group-item">[Nombre de la obra social]</dd>
+
+
+
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal planes de carreras -->
+            <div class="modal fade" id="careerHelpModal" tabindex="-1" aria-labelledby="careerHelpModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="careerHelpModalLabel">Planes de carreras</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table table-bordered border-dark align-middle">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="text-center align-middle">Carrera</th>
+                                        <th scope="col" class="text-center px-5">Año de ingreso / cambio de plan</th>
+                                        <th scope="col" class="text-center">N° de plan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th class="text-center" scope="row">Geografía</th>
+                                        <td class="text-center">2020 en adelante</td>
+                                        <td class="text-center">544/19</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" scope="row">Historia</th>
+                                        <td class="text-center">2020 en adelante</td>
+                                        <td class="text-center">547/19</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" scope="row">Lengua y Literatura</th>
+                                        <td class="text-center">2020 en adelante</td>
+                                        <td class="text-center">536/19</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" scope="row" rowspan="2">Inicial</th>
+                                        <td class="text-center">Hasta 2021</td>
+                                        <td class="text-center">309/14</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2022 en adelante</td>
+                                        <td class="text-center">327/22</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" scope="row" rowspan="2">Primaria</th>
+                                        <td class="text-center">Hasta 2021</td>
+                                        <td class="text-center">310/14</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2022 en adelante</td>
+                                        <td class="text-center">328/22</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" scope="row" rowspan="2">Inglés</th>
+                                        <td class="text-center">Hasta 2021</td>
+                                        <td class="text-center">308/14</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2022 en adelante</td>
+                                        <td class="text-center">326/22</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" scope="row">TSTLyR</th>
+                                        <td class="text-center">plan único</td>
+                                        <td class="text-center">176/16</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" scope="row">TSGAOP</th>
+                                        <td class="text-center">plan único</td>
+                                        <td class="text-center">409/18</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </main>
 
     <div id="btnPrint"></div>
