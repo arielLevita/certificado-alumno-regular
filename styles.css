@@ -8,8 +8,13 @@
     aspect-ratio: 16/9;
 }
 
+#principal {
+    width: clamp(600px, 75vw, 1200px);
+    margin: 0 auto;
+}
+
 p {
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 button[class="form-text"] {
@@ -23,15 +28,15 @@ button[class="form-text"] {
 }
 
 .certificado {
-    border-left: 10px solid rgb(113, 45, 168);
+    /* border-left: 10px solid rgb(113, 45, 168); */
     padding: 20px;
     display: block;
 }
 
 #firmas {
-    height: 8cm;
+    display: none;
 }
 
-.pieDePagina {
+/* .pieDePagina {
     font-size: 10px;
-}
+} */

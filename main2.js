@@ -40,17 +40,15 @@ btnGenerar.addEventListener('click', (e) => {
 });
 
 function generateCertificate(nombre, apellido, dni, pariente, anioCursada, carrera, dia, mes, anio, destino) {
-    return `<div class="d-flex flex-column justify-content-center certificado">
-                <h2 class="text-center">Constancia</h2>
-                <h2 class="mb-5 text-center">de Alumno Regular</h2>
-                <p class="lh-lg">Se deja constancia que <span class="text-uppercase fw-bold">${nombre.value.trim()} ${apellido.value.trim()}</span>, D.N.I. Nº${dni.value.trim()},${pariente} es alumno/a regular en el ${anioCursada.value} de la carrera ${carrera} que se dicta en el Instituto Superior de Formación Profesional N°809 de lunes a viernes de 18:00hs. a 23:00hs. y <span class="fw-bold">cumple con los Art 8, 9, 10, 17, 18 del Reglamento Académico Marco Res. 640/14.</span></p>
-
-                <p class="lh-lg">Se extiende la presente para ser presentada antes las autoridades que correspondan, en Esquel a los ${dia} días del mes de ${mes} de ${anio}.</p>
-
-                <div id="firmas">
-                    <div class="text-center py-3 border-top border-black">Firma Vicedirector/\nSecretario Académico</div>
-                    <div class="text-center py-3 border-top border-black">Firma Director</div>
-                    <div class="text-center py-3 border-top border-black">Sello Institución</div>
+    return `<div class="container d-flex flex-column justify-content-center certificado">
+                <h4 class="mb-5 text-center">Certificado de Alumno Regular</h4>
+                <p>La Dirección del Instituto Superior de Formación Docente Nº 809 CERTIFICA que <span class="text-uppercase fw-bold">${nombre.value.trim()} ${apellido.value.trim()}</span> (DNI Nº${dni.value.trim()}),${pariente} es alumno/a regular en ${anioCursada.value} año de la carrera de ${carrera}.</p>
+                <p>A los ${dia} días del mes de ${mes} de ${anio}, en la ciudad de Esquel, se extiende el presente CERTIFICADO a pedido de el/la interesado/a, para ser presentado ante las autoridades de ${destino.value.trim()}.</p>
+                <span id="firmas"></span>
+                <div class="text-center lh-1" id="datosInstituto">
+                    <p class="m-0 pieDePagina">ISFD N° 809 - República de Costa Rica</p>
+                    <p class="m-0 pieDePagina">Sarmiento 940 / Esquel-Chubut / (2945) 452323</p>
+                    <p class="m-0 pieDePagina">isfd809-chu.infd.edu.ar / 809esquel@gmail.com</p>
                 </div>
             </div>`
 }

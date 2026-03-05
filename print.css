@@ -1,0 +1,60 @@
+/* 1. Definir el tamaño de la hoja y los márgenes */
+@page {
+    size: A4 portrait;
+    /* Ajusta este valor para reducir o ampliar los márgenes de la hoja de salida */
+    margin: 1.2cm; 
+}
+
+/* 2. Evitar que el flexbox de Bootstrap estire la página y aleje el footer */
+body {
+    min-height: auto !important;
+    display: block !important; 
+}
+
+/* 3. Anular el clamp() de styles.css para que el texto ocupe el ancho real de la hoja A4 */
+#principal {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+}
+
+/* 4. Ocultar elementos innecesarios en la impresión (usamos display: none por seguridad) */
+#logos, 
+#btnPrint {
+    display: none !important;
+}
+
+h2 {
+    color: rgb(255, 105, 43);
+    font-size: 50px;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 16px;
+    text-align: justify;
+}
+
+.certificado {
+    padding: 0;
+}
+
+/* 5. Ajustar las firmas y anular el alto fijo problemático */
+#firmas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-top: 7rem; /* Reducido de 6rem para acortar distancia */
+}
+
+/* 6. Controlar la distancia final hacia la imagen del footer */
+footer {
+    margin-top: 2rem !important; /* Sobrescribe la clase .mt-5 de Bootstrap si es necesario */
+    page-break-inside: avoid; /* Evita que el footer se corte a la mitad si justo cae en un salto de página */
+    text-align: center;
+}
+
+footer img {
+    max-width: 100%;
+    height: auto;
+}
