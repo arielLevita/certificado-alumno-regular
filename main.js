@@ -4,6 +4,12 @@ const dia = d.getDate();
 const mes = month[d.getMonth()];
 const anio = d.getFullYear();
 
+const formularioContenedor = document.getElementById("formulario");
+const certificadoContenedor = document.getElementById("certificado-container");
+const btnPrintContenedor = document.getElementById("btnPrint");
+
+const formularioNode = document.querySelector("form");
+
 const career = ["Profesorado de Educación Secundaria en Geografía, Res. MECH 544/19",
     "Profesorado de Educación Secundaria en Historia, Res. MECH 547/19",
     "Profesorado de Educación Secundaria en Lengua y Literatura, Res. MECH 536/19",
@@ -27,19 +33,25 @@ const nombrePariente = document.getElementById("floatingRelativeName");
 const apellidoPariente = document.getElementById("floatingRelativeLastName");
 const dniPariente = document.getElementById("floatingRelativeId");
 
-btnGenerar.addEventListener('click', (e) => {
+formularioNode.addEventListener('submit', (e) => {
+    e.preventDefault();
+
     let carrera = career[document.getElementById("floatingCareer").value - 1];
     let pariente = "";
     if (checkbox.checked) {
         pariente = ` hijo/a de ${nombrePariente.value.trim()} ${apellidoPariente.value.trim()} (DNI N°${dniPariente.value.trim()}),`;
     };
 
-    document.getElementById("formulario").innerHTML = generateCertificate(nombre, apellido, dni, pariente, anioCursada, carrera, dia, mes, anio, destino);
+    certificadoContenedor.innerHTML = generateCertificate(nombre, apellido, dni, pariente, anioCursada, carrera, dia, mes, anio, destino);
 
-    document.getElementById("btnPrint").innerHTML = printCertificate();
+    btnPrintContenedor.innerHTML = printCertificate();
+
+    formularioContenedor.classList.add("d-none");
+    certificadoContenedor.classList.remove("d-none");
+    btnPrintContenedor.style.display = "block";
 });
 
-function generateCertificate(nombre, apellido, dni, pariente, anioCursada, carrera, dia, mes, anio, destino) {
+function generateCertificate(nombre, apellido, dni, pariente, anioCursada, carrera, dia, mes, anio) {
     return `<div class="d-flex flex-column justify-content-center certificado">
                 <h2 class="text-center">Constancia</h2>
                 <h2 class="mb-5 text-center">de Alumno Regular</h2>
@@ -55,9 +67,30 @@ function generateCertificate(nombre, apellido, dni, pariente, anioCursada, carre
             </div>`
 }
 
-
 function printCertificate() {
-    return `<div class="d-flex justify-content-center my-5">
-                <input class="btn btn-primary" type="button" value="Imprimir" onclick="window.print()">
+    return `<div class="d-flex justify-content-center gap-3 my-5">
+                <button class="btn btn-secondary" type="button" onclick="volverAEditar()">Volver a editar</button>
+                <button class="btn btn-primary" type="button" onclick="window.print()">Imprimir</button>
             </div>`
 }
+
+function volverAEditar() {
+    formularioContenedor.classList.remove("d-none");
+    certificadoContenedor.classList.add("d-none");
+    btnPrintContenedor.style.display = "none";
+    
+    certificadoContenedor.innerHTML = "";
+}
+
+function formatearDNI(e) {
+    let valor = e.target.value.replace(/\D/g, "");
+    
+    if (valor.length > 8) {
+        valor = valor.substring(0, 8);
+    }
+    
+    e.target.value = valor.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
+dni.addEventListener("input", formatearDNI);
+dniPariente.addEventListener("input", formatearDNI);

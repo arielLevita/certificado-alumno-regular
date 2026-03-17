@@ -28,7 +28,6 @@ button[class="form-text"] {
 }
 
 .certificado {
-    /* border-left: 10px solid rgb(113, 45, 168); */
     padding: 20px;
     display: block;
 }
@@ -36,7 +35,3 @@ button[class="form-text"] {
 #firmas {
     display: none;
 }
-
-/* .pieDePagina {
-    font-size: 10px;
-} */

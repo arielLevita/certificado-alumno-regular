@@ -52,7 +52,7 @@
                         <div class="form-floating col-md-10">
                             <select class="form-select" id="floatingCareer" aria-label="seleccione una carrera"
                                 required>
-                                <option selected>Seleccione una carrera</option>
+                                <option selected disabled value="">Seleccione una carrera...</option>
                                 <option value="1">
                                     Profesorado de Educación Secundaria en Geografía, Res. MECH
                                     544/19
@@ -101,7 +101,7 @@
 
                         <div class="form-floating col-md-2">
                             <select class="form-select" id="floatingYear" aria-label="año que cursa" required>
-                                <option selected>Cursa año</option>
+                                <option selected disabled value="">Cursa año</option>
                                 <option value="primero">Primero</option>
                                 <option value="segundo">Segundo</option>
                                 <option value="tercero">Tercero</option>
@@ -162,6 +162,8 @@
                 </form>
             </div>
         </div>
+
+        <div id="certificado-container" class="d-none"></div>
 
         <!-- Modal ejemplos de destinatarios -->
         <div class="modal fade" id="destinationHelpModal" tabindex="-1" aria-labelledby="destinationHelpModalLabel"
