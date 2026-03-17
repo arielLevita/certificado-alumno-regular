@@ -1,16 +1,26 @@
 /* 1. Definir el tamaño de la hoja y los márgenes */
 @page {
-    size: A4 portrait;
-    /* Ajusta este valor para reducir o ampliar los márgenes de la hoja de salida */
+    /* Al usar 'auto', el navegador respeta el tamaño de papel físico seleccionado por el usuario */
+    size: auto; 
     margin: 0; 
 }
 
-/* 2. Evitar que el flexbox de Bootstrap estire la página y aleje el footer */
 body {
-    min-height: auto !important;
-    display: block !important; 
-    padding: 1.2cm;
-    box-sizing: border-box;
+    /* Forzamos el alto exacto de una página impresa */
+    height: 100vh !important; 
+    max-height: 100vh !important;
+    
+    /* Reactivamos flexbox para distribuir el espacio verticalmente */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    
+    margin: 0 !important;
+    padding: 1.5cm !important; 
+    box-sizing: border-box !important;
+    
+    /* Evita que cualquier píxel extra genere una página en blanco o un salto */
+    overflow: hidden !important; 
 }
 
 /* 3. Anular el clamp() de styles.css para que el texto ocupe el ancho real de la hoja A4 */
