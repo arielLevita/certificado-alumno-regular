@@ -65,27 +65,26 @@
                                     Profesorado de Educación Secundaria en Lengua y Literatura,
                                     Res. MECH 536/19
                                 </option>
-                                <option value="4">
+                                <!-- <option value="4">
                                     Profesorado de Educación Inicial, Res. MECH 309/14
-                                </option>
+                                </option> -->
                                 <option value="5">
                                     Profesorado de Educación Inicial, Res. MECH 327/22
                                 </option>
-                                <option value="6">
+                                <!-- <option value="6">
                                     Profesorado de Educación Primaria, Res. MECH 310/14
-                                </option>
+                                </option> -->
                                 <option value="7">
                                     Profesorado de Educación Primaria, Res. MECH 328/22
                                 </option>
-                                <option value="8">
+                                <!-- <option value="8">
                                     Profesorado de Inglés, Res. MECH 308/14
-                                </option>
+                                </option> -->
                                 <option value="9">
                                     Profesorado de Inglés, Res. MECH 326/22
                                 </option>
                                 <option value="10">
-                                    Tecnicatura Superior en Tiempo Libre y Recreación, Res. MECH
-                                    176/16
+                                    Tecnicatura Superior en Niñez, Adolescencia y Familia
                                 </option>
                                 <option value="11">
                                     Tecnicatura Superior en Gestión Administrativa Orientada a
@@ -164,6 +163,28 @@
         </div>
 
         <div id="certificado-container" class="d-none"></div>
+
+        <div id="btnPrint" class="d-none justify-content-center gap-3 my-5 d-print-none">
+            <button class="btn btn-secondary" type="button" id="btnEdit">Volver a editar</button>
+            <button class="btn btn-primary" type="button" id="btnPrintAction">Imprimir</button>
+        </div>
+
+        <template id="certificado-template">
+            <div class="d-flex flex-column justify-content-center certificado">
+                <h2 class="text-center">Constancia</h2>
+                <h2 class="mb-5 text-center">de Alumno Regular</h2>
+
+                <p class="lh-lg">Se deja constancia que <span class="text-uppercase fw-bold" data-id="nombreCompleto"></span>, D.N.I. Nº<span data-id="dni"></span><span data-id="pariente"></span> es alumno/a regular en el <span data-id="anioCursada"></span> de la carrera <span data-id="carrera"></span> que se dicta en el Instituto Superior de Formación Profesional N°809 de lunes a viernes de 18:00hs. a 23:00hs. y <span class="fw-bold">cumple con los Art 8, 9, 10, 17, 18 del Reglamento Académico Marco Res. 640/14.</span></p>
+
+                <p class="lh-lg">Se extiende la presente para ser presentada ante las autoridades que correspondan, en Esquel a los <span data-id="dia"></span> días del mes de <span data-id="mes"></span> de <span data-id="anio"></span>.</p>
+
+                <div id="firmas">
+                    <div class="text-center py-3 border-top border-black">Firma Vicedirector/<br>Secretario Académico</div>
+                    <div class="text-center py-3 border-top border-black">Firma Director</div>
+                    <div class="text-center py-3 border-top border-black">Sello Institución</div>
+                </div>
+            </div>
+        </template>
 
         <!-- Modal ejemplos de destinatarios -->
         <div class="modal fade" id="destinationHelpModal" tabindex="-1" aria-labelledby="destinationHelpModalLabel"
@@ -274,8 +295,6 @@
             </div>
         </div>
     </main>
-
-    <div id="btnPrint"></div>
 
     <footer>
         <img src="/images/footer.png" alt="footer logo" class="img-fluid mt-5">
