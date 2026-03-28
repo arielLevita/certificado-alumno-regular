@@ -1,36 +1,23 @@
-/* 1. Definir el tamaño de la hoja y los márgenes */
 @page {
-    /* Al usar 'auto', el navegador respeta el tamaño de papel físico seleccionado por el usuario */
     size: auto; 
-    margin: 0; 
+    margin: 0;
 }
 
 body {
-    /* Forzamos el alto exacto de una página impresa */
-    height: 100vh !important; 
-    max-height: 100vh !important;
-    
-    /* Reactivamos flexbox para distribuir el espacio verticalmente */
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    
+    display: block !important;
     margin: 0 !important;
-    padding: 1.5cm !important; 
+    padding: 1.5cm !important;
     box-sizing: border-box !important;
-    
-    /* Evita que cualquier píxel extra genere una página en blanco o un salto */
-    overflow: hidden !important; 
+    position: relative;
 }
 
-/* 3. Anular el clamp() de styles.css para que el texto ocupe el ancho real de la hoja A4 */
 #principal {
     width: 100% !important;
     max-width: none !important;
     margin: 0 !important;
+    padding-bottom: 120px !important; 
 }
 
-/* 4. Ocultar elementos innecesarios en la impresión (usamos display: none por seguridad) */
 #logos, 
 #btnPrint {
     display: none !important;
@@ -51,22 +38,24 @@ p {
     padding: 0;
 }
 
-/* 5. Ajustar las firmas y anular el alto fijo problemático */
 #firmas {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
-    margin-top: 7rem; /* Reducido de 6rem para acortar distancia */
+    margin-top: 7rem;
 }
 
-/* 6. Controlar la distancia final hacia la imagen del footer */
 footer {
-    margin-top: 2rem !important; /* Sobrescribe la clase .mt-5 de Bootstrap si es necesario */
-    page-break-inside: avoid; /* Evita que el footer se corte a la mitad si justo cae en un salto de página */
+    position: fixed !important; 
+    bottom: 1.5cm !important; /* Se apoya en el límite de tu padding inferior */
+    left: 1.5cm !important;   /* Respeta el falso margen izquierdo */
+    right: 1.5cm !important;  /* Respeta el falso margen derecho */
+    width: calc(100% - 3cm) !important; /* El ancho total menos los 1.5cm de cada lado */
+    margin: 0 !important;
     text-align: center;
 }
 
 footer img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
