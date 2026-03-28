@@ -1,29 +1,23 @@
-/* 1. Definir el tamaño de la hoja y los márgenes */
 @page {
-    /* Al usar 'auto', el navegador respeta el tamaño de papel físico seleccionado por el usuario */
     size: auto; 
-    margin: 0; /* Oculta la metadata del navegador */
+    margin: 0;
 }
 
-/* 2. Configuración general del cuerpo */
 body {
     display: block !important;
     margin: 0 !important;
-    padding: 1.5cm !important; /* Recreamos el margen visual acá para proteger el contenido */
+    padding: 1.5cm !important;
     box-sizing: border-box !important;
     position: relative;
 }
 
-/* 3. Anular el clamp() de styles.css para que el texto ocupe el ancho real de la hoja A4 */
 #principal {
     width: 100% !important;
     max-width: none !important;
     margin: 0 !important;
-    /* Sumamos un padding inferior generoso para que el texto no pase por debajo del footer flotante */
     padding-bottom: 120px !important; 
 }
 
-/* 4. Ocultar elementos innecesarios en la impresión */
 #logos, 
 #btnPrint {
     display: none !important;
@@ -44,7 +38,6 @@ p {
     padding: 0;
 }
 
-/* 5. Ajustar las firmas */
 #firmas {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -52,7 +45,6 @@ p {
     margin-top: 7rem;
 }
 
-/* 6. Footer fijo para evitar la segunda hoja en celulares */
 footer {
     position: fixed !important; 
     bottom: 1.5cm !important; /* Se apoya en el límite de tu padding inferior */
@@ -66,5 +58,4 @@ footer {
 footer img {
     width: 100%;
     height: auto;
-    /* max-height: 200px; */
 }
